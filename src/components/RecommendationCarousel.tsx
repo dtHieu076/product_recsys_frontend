@@ -19,13 +19,13 @@ export const RecommendationCarousel: React.FC<RecommendationCarouselProps> = ({ 
           <div className="h-40 bg-gray-50 relative">
             <img
               src={product.image_url}
-              alt={product.name}
+              alt={product.product_name}
               className="object-cover w-full h-full"
               referrerPolicy="no-referrer"
             />
           </div>
           <div className="p-4 flex flex-col flex-grow">
-            <h4 className="text-base font-semibold text-gray-900 line-clamp-1 mb-1">{product.name}</h4>
+            <h4 className="text-base font-semibold text-gray-900 line-clamp-1 mb-1">{product.product_name}</h4>
             <p className="text-xs text-gray-500 mb-2">{product.brand}</p>
             <div className="mt-auto flex items-center justify-between mb-3">
               <span className="text-lg font-bold text-gray-900">${product.price.toFixed(2)}</span>

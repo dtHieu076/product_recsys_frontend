@@ -33,7 +33,7 @@ export const ProductDetailPage: React.FC = () => {
               <div className="aspect-w-1 aspect-h-1 bg-gray-100 lg:aspect-none lg:h-full">
                 <img
                   src={product.image_url}
-                  alt={product.name}
+                  alt={product.product_name}
                   className="object-cover object-center w-full h-full lg:h-full lg:w-full"
                   referrerPolicy="no-referrer"
                 />
@@ -41,7 +41,7 @@ export const ProductDetailPage: React.FC = () => {
 
               <div className="p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-2">
-                  {product.name}
+                  {product.product_name}
                 </h1>
                 <p className="text-lg text-gray-500 font-medium mb-6">by {product.brand}</p>
 

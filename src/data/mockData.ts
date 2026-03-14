@@ -15,7 +15,7 @@ export const mockCategories: Category[] = [
 export const mockProducts: Product[] = [
   {
     product_id: 101,
-    name: 'Wireless Noise-Canceling Headphones',
+    product_name: 'Wireless Noise-Canceling Headphones',
     brand: 'AuraSound',
     price: 149.99,
     image_url: 'https://picsum.photos/seed/headphones/400/300',
@@ -24,7 +24,7 @@ export const mockProducts: Product[] = [
   },
   {
     product_id: 102,
-    name: 'Smart Fitness Watch Series 5',
+    product_name: 'Smart Fitness Watch Series 5',
     brand: 'FitTrack',
     price: 199.99,
     image_url: 'https://picsum.photos/seed/watch/400/300',
@@ -33,7 +33,7 @@ export const mockProducts: Product[] = [
   },
   {
     product_id: 103,
-    name: 'Premium Leather Backpack',
+    product_name: 'Premium Leather Backpack',
     brand: 'UrbanGear',
     price: 129.99,
     image_url: 'https://picsum.photos/seed/backpack/400/300',
@@ -42,7 +42,7 @@ export const mockProducts: Product[] = [
   },
   {
     product_id: 104,
-    name: 'Ergonomic Wireless Mouse',
+    product_name: 'Ergonomic Wireless Mouse',
     brand: 'LogiTech',
     price: 49.99,
     image_url: 'https://picsum.photos/seed/mouse/400/300',
@@ -51,7 +51,7 @@ export const mockProducts: Product[] = [
   },
   {
     product_id: 105,
-    name: 'Portable Bluetooth Speaker',
+    product_name: 'Portable Bluetooth Speaker',
     brand: 'SoundWave',
     price: 79.99,
     image_url: 'https://picsum.photos/seed/speaker/400/300',
@@ -60,7 +60,7 @@ export const mockProducts: Product[] = [
   },
   {
     product_id: 106,
-    name: '4K Ultra HD Monitor 27"',
+    product_name: '4K Ultra HD Monitor 27"',
     brand: 'ViewClear',
     price: 349.99,
     image_url: 'https://picsum.photos/seed/monitor/400/300',
@@ -69,7 +69,7 @@ export const mockProducts: Product[] = [
   },
   {
     product_id: 107,
-    name: 'Minimalist Desk Lamp',
+    product_name: 'Minimalist Desk Lamp',
     brand: 'Lumi',
     price: 39.99,
     image_url: 'https://picsum.photos/seed/lamp/400/300',
@@ -78,7 +78,7 @@ export const mockProducts: Product[] = [
   },
   {
     product_id: 108,
-    name: 'Compact Mechanical Keyboard',
+    product_name: 'Compact Mechanical Keyboard',
     brand: 'KeyTech',
     price: 89.99,
     image_url: 'https://picsum.photos/seed/keyboard/400/300',
@@ -87,7 +87,7 @@ export const mockProducts: Product[] = [
   },
   {
     product_id: 109,
-    name: 'Aura Smart Speaker',
+    product_name: 'Aura Smart Speaker',
     brand: 'Aura Home',
     price: 199.00,
     image_url: 'https://picsum.photos/seed/smartspeaker/400/400',
@@ -96,7 +96,7 @@ export const mockProducts: Product[] = [
   },
   {
     product_id: 110,
-    name: 'Ceramic Coffee Mug',
+    product_name: 'Ceramic Coffee Mug',
     brand: 'HomeGoods',
     price: 24.00,
     image_url: 'https://picsum.photos/seed/mug/400/400',
@@ -105,7 +105,7 @@ export const mockProducts: Product[] = [
   },
   {
     product_id: 111,
-    name: 'Jute Storage Basket',
+    product_name: 'Jute Storage Basket',
     brand: 'EcoHome',
     price: 35.00,
     image_url: 'https://picsum.photos/seed/basket/400/400',
@@ -114,7 +114,7 @@ export const mockProducts: Product[] = [
   },
   {
     product_id: 112,
-    name: 'Smart Home Speaker',
+    product_name: 'Smart Home Speaker',
     brand: 'TechLife',
     price: 89.00,
     image_url: 'https://picsum.photos/seed/speaker2/400/400',

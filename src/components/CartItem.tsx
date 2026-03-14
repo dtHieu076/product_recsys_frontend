@@ -13,7 +13,7 @@ export const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onRe
       <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
         <img
           src={item.product.image_url}
-          alt={item.product.name}
+          alt={item.product.product_name}
           className="h-full w-full object-cover object-center"
           referrerPolicy="no-referrer"
         />
@@ -22,7 +22,7 @@ export const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onRe
       <div className="ml-6 flex flex-1 flex-col">
         <div>
           <div className="flex justify-between text-base font-medium text-gray-900">
-            <h3 className="line-clamp-2 pr-4">{item.product.name}</h3>
+            <h3 className="line-clamp-2 pr-4">{item.product.product_name}</h3>
             <p className="ml-4 whitespace-nowrap">${(item.product.price * item.quantity).toFixed(2)}</p>
           </div>
           <p className="mt-1 text-sm text-gray-500">{item.product.brand}</p>

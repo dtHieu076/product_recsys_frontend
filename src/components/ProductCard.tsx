@@ -13,7 +13,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }
       <div className="aspect-w-4 aspect-h-3 bg-gray-100 relative group">
         <img
           src={product.image_url}
-          alt={product.name}
+          alt={product.product_name}
           className="object-cover w-full h-48"
           referrerPolicy="no-referrer"
         />
@@ -21,7 +21,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }
       </div>
       <div className="p-5 flex flex-col flex-grow">
         <h3 className="text-lg font-semibold text-gray-900 leading-tight mb-1 line-clamp-2">
-          {product.name}
+          {product.product_name}
         </h3>
         <p className="text-sm text-gray-500 mb-3 font-medium">Brand: {product.brand}</p>
         <div className="mt-auto flex items-center justify-between">
