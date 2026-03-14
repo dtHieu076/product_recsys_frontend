@@ -1,7 +1,7 @@
 import axiosClient from './axiosClient';
 import { Event } from '../types/type';
 
-const useMockData = true;
+const useMockData = false;
 
 export const logEvent = async (event: Event): Promise<void> => {
   if (useMockData) {

@@ -2,7 +2,7 @@ import axiosClient from './axiosClient';
 import { Product } from '../types/type';
 import { mockProducts } from '../data/mockData';
 
-const useMockData = true;
+const useMockData = false;
 
 export const getProducts = async (): Promise<Product[]> => {
   if (useMockData) {
