@@ -35,7 +35,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       }
       return [...prev, { product, quantity: 1 }];
     });
-    toast.success(`${product.name} added to cart!`);
+    toast.success(`${product.product_name} added to cart!`);
   };
 
   const removeFromCart = (productId: number) => {

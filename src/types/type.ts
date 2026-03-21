@@ -35,3 +35,10 @@ export interface Recommendation {
   product_id: number;
   score: number;
 }
+
+export interface PaginatedResponse {
+  products: Product[];
+  total: number;
+  page: number;
+  limit: number;
+}

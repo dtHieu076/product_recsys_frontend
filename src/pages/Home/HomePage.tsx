@@ -2,9 +2,10 @@ import React from 'react';
 import { useHomePageInit } from './HomePage.init';
 import { ProductGrid } from '../../components/ProductGrid';
 import { Navbar } from '../../components/Navbar';
+import { Pagination } from '../../components/Pagination';
 
 export const HomePage: React.FC = () => {
-  const { products, isLoading, error, handleAddCart } = useHomePageInit();
+  const { products, isLoading, error, handleAddCart, currentPage, totalProducts, productsPerPage, handlePageChange } = useHomePageInit();
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -24,7 +25,15 @@ export const HomePage: React.FC = () => {
             {error}
           </div>
         ) : (
-          <ProductGrid products={products} onAddToCart={handleAddCart} />
+<div>
+            <ProductGrid products={products} onAddToCart={handleAddCart} />
+            <Pagination
+              currentPage={currentPage}
+              totalItems={totalProducts}
+              limit={productsPerPage}
+              onPageChange={handlePageChange}
+            />
+          </div>
         )}
       </main>
     </div>
