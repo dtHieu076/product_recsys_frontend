@@ -1,4 +1,4 @@
-import { User, Product, Category, Recommendation } from '../types/type';
+import { User, Category, Recommendation } from '../types/type';
 
 export const mockUsers: User[] = [
   { user_id: 520088904, username: 'nguyenvana' },
@@ -145,4 +145,40 @@ export const mockRecommendations: Record<number, Recommendation[]> = {
     { product_id: 109, score: 0.76 },
     { product_id: 112, score: 0.71 },
   ]
+};
+
+import { HistoryItem, Product, ModelComparisonResponse } from '../types/type';
+
+
+export const mockHistoryData: Record<number, HistoryItem[]> = {
+  100000001: [
+    { category: 'Electronics', view: 15, click: 8, addToCart: 3 },
+    { category: 'Accessories', view: 10, click: 5, addToCart: 2 },
+    { category: 'Home', view: 5, click: 2, addToCart: 1 },
+  ],
+  520088904: [
+    { category: 'Home', view: 12, click: 6, addToCart: 4 },
+    { category: 'Electronics', view: 8, click: 4, addToCart: 2 },
+  ],
+};
+
+export const mockModelComparisons: Record<number, ModelComparisonResponse> = {
+  100000001: {
+    historyData: mockHistoryData[100000001],
+    modelA: [
+      { ...mockProducts[0], isInteracted: true, prediction_confidence: 0.81 },
+      { ...mockProducts[3], prediction_confidence: 0.78 },
+      { ...mockProducts[4], prediction_confidence: 0.72 },
+    ],
+    modelB: [
+      { ...mockProducts[1], prediction_confidence: 0.92 },
+      { ...mockProducts[5], isInteracted: true, prediction_confidence: 0.80 },
+      { ...mockProducts[7], prediction_confidence: 0.78 },
+    ],
+    modelC: [
+      { ...mockProducts[2], isInteracted: true, prediction_confidence: 0.90 },
+      { ...mockProducts[6], prediction_confidence: 0.86 },
+      { ...mockProducts[8], prediction_confidence: 0.76 },
+    ],
+  },
 };

@@ -17,3 +17,30 @@ export const getRecommendations = async (user_id: number): Promise<Product[]> =>
   const response = await axiosClient.get(`/recommendations/${user_id}`);
   return response.data;
 };
+
+export const getALSRecommendations = async (user_id: number): Promise<any[]> => {
+  const response = await fetch(`https://emanatively-unpossessing-zackary.ngrok-free.dev/recommend/${user_id}`, {
+    method: 'GET',
+    headers: {
+      'ngrok-skip-browser-warning': '69420' // <--- DÒNG NÀY LÀ CHÌA KHÓA CHỐNG LỖI
+    }
+  });
+  if (!response.ok) {
+    throw new Error(`ALS API error: ${response.status} ${response.statusText}`);
+  }
+  return response.json();
+};
+
+export const getSASRecRecommendations = async (user_id: number): Promise<any[]> => {
+  const response = await fetch(`https://brushy-nonoptimistic-tuan.ngrok-free.dev/recommend/${user_id}`, {
+    method: 'GET',
+    headers: {
+      'ngrok-skip-browser-warning': '69420' // DÒNG NÀY LÀ CHÌA KHÓA CHỐNG LỖI ngrok
+    }
+  });
+  if (!response.ok) {
+    throw new Error(`SASRec API error: ${response.status} ${response.statusText}`);
+  }
+  return response.json();
+};
+

@@ -1,5 +1,6 @@
 import axiosClient from './axiosClient';
 import { Event } from '../types/type';
+import { CategoryHistory } from '../types/history';
 
 const useMockData = false;
 
@@ -40,3 +41,10 @@ export const logEvent = async (event: Event): Promise<void> => {
     throw error;
   }
 };
+
+export const getUserHistory = async (user_id: number): Promise<CategoryHistory[]> => {
+  console.log(`Fetching history for user ${user_id}`);
+  const response = await axiosClient.get(`/events/users/${user_id}/history`);
+  return response.data;
+};
+

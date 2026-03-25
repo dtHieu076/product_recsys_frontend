@@ -16,6 +16,25 @@ export interface Product {
   image_url: string;
   category_id: number;
   description: string;
+  category_code?: string;
+  confidence_score?: number;
+  prediction_confidence?: number;
+  isInteracted?: boolean;
+
+}
+
+export interface HistoryItem {
+  category: string;
+  view: number;
+  click: number;
+  addToCart: number;
+}
+
+export interface ModelComparisonResponse {
+  historyData: HistoryItem[];
+  modelA: Product[];
+  modelB: Product[];
+  modelC: Product[];
 }
 
 export interface Event {

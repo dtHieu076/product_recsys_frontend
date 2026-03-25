@@ -13,6 +13,7 @@ import { LoginPage } from './pages/Login/LoginPage';
 import { ProductDetailPage } from './pages/ProductDetail/ProductDetailPage';
 import { RecommendedPage } from './pages/Recommended/RecommendedPage';
 import { CartPage } from './pages/Cart/CartPage';
+import { ModelComparisonPage } from './pages/ModelComparison/ModelComparisonPage';
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
             <Route path="/recommended" element={<RecommendedPage />} />
+            <Route path="/model-comparison" element={<ModelComparisonPage />} />
             <Route path="/cart" element={<CartPage />} />
           </Routes>
         </Router>

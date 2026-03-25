@@ -26,27 +26,34 @@ export const Navbar: React.FC = () => {
               ML Commerce
             </Link>
           </div>
-          
+
           <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-            <Link 
-              to="/" 
-              className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
-                isActive('/') 
-                  ? 'border-black text-gray-900' 
+            <Link
+              to="/"
+              className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${isActive('/')
+                  ? 'border-black text-gray-900'
                   : 'border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-300'
-              }`}
+                }`}
             >
               Home
             </Link>
-            <Link 
-              to="/recommended" 
-              className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
-                isActive('/recommended') 
-                  ? 'border-black text-gray-900' 
+            <Link
+              to="/recommended"
+              className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${isActive('/recommended')
+                  ? 'border-black text-gray-900'
                   : 'border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-300'
-              }`}
+                }`}
             >
               Recommended
+            </Link>
+            <Link
+              to="/model-comparison"
+              className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${isActive('/model-comparison')
+                  ? 'border-black text-gray-900'
+                  : 'border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-300'
+                }`}
+            >
+              Model Comparison
             </Link>
           </div>
 
@@ -55,7 +62,7 @@ export const Navbar: React.FC = () => {
               <ShoppingCart className="h-6 w-6" />
               {/* Optional: Add a badge for cart items count here */}
             </Link>
-            
+
             {user ? (
               <div className="flex items-center space-x-3">
                 <span className="text-sm font-medium text-gray-700 hidden sm:block">
